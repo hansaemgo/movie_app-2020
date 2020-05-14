@@ -7,14 +7,14 @@ function Movie({ id, year, title, summary, poster, genres }) {
 			<img src={poster} alt={title} title={title} />
 			<h3 className='movie_title'>{title}</h3>
 			<h5 className='movie_year'>{year}</h5>
-			<ul className='genres'>
+			<ul className='movie_genres'>
 				{genres.map((genres, index) => (
-					<li key={index} className='generes_genre'>
+					<li key={index} className='genere_genres'>
 						{genres}
 					</li>
 				))}
 			</ul>
-			<p className='movie_summary'>{summary}</p>
+			<p className='movie_summary'>{summary.slice(0, 180)}</p>
 		</div>
 	);
 }
@@ -25,7 +25,7 @@ Movie.propTypes = {
 	title: PropTypes.string,
 	summary: PropTypes.string,
 	poster: PropTypes.string,
-	generes: PropTypes.string,
+	genres: PropTypes.string,
 };
 
 export default Movie;
