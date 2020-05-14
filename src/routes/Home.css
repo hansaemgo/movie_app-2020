@@ -86,3 +86,9 @@ body,
 .movie_summary {
 	padding-left: 180px;
 }
+
+@media only screen and (max-width: 768px) {
+	.movies .movie {
+		width: 100%;
+	}
+}
